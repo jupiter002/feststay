@@ -21,11 +21,12 @@ from folium.plugins import MarkerCluster
 
 
 # 멀티 페이지용 제목
-st.set_page_config(page_title='FestStay',
+st.set_page_config(page_title='FESTSTAY',
                    page_icon='🕍', layout="wide")
 
 st.sidebar.header('당신이 원하는 축제와 숙소를 골라보세요!')
-st.title('페스트스테이FestStay')
+st.title('''FESTSTAY
+페스트스테이''')
 st.title('')
 
 # csv파일에서 축제 좌표값, 이름, 시군구명, 개최장소 가져오기
@@ -213,7 +214,7 @@ try:
         # '추천여부_최종'이 '비추천'이 아닌 것만 담기
         sorted_df = sorted_df[sorted_df['추천여부_최종'] != '비추천']
 
-        # st.write('🏠숙소 리스트🏠')
+        # st.write('🏠숙소 리스트🏠')`
         st.subheader('🏠숙소 리스트🏠')
         showdf = sorted_df[['모텔명', '주소_x', '전체평점_x']]  # '모텔명', '주소', '전체평점'만 담기
 
@@ -223,7 +224,7 @@ try:
         st.write(showdf)
 
 except Exception as e:
-    a
+
 
     if fesname == '':
         st.warning('축제명이 입력되지 않았습니다😢')
